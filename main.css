@@ -44,6 +44,12 @@ body{
 	color : #fff;
 }
 
+#newsletter {
+	text-align: center;
+	background-color : rgba(40, 44, 44, 0.9);
+	color : #fff;
+}
+
 #circleborder{
 	border-radius: 50px;
 }
