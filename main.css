@@ -39,8 +39,8 @@ body{
 
 #mission {
 	text-align: center;
-	background-color : rgba(32, 35, 41, 0.9) ;
-	color : #ddd;
+	background-color : rgba(215, 40, 40, 0.9) ;
+	color : #fff;
 }
 
 #circleborder{
@@ -49,4 +49,10 @@ body{
 
 .navbar-inner {
     background:rgba(16,16,16,0.5);
+}
+
+.accessories{
+	text-align: center;
+	background-color : rgba(215, 40, 40, 0.9) ;
+	color : #fff;
 }
