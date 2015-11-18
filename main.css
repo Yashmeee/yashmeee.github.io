@@ -38,6 +38,10 @@
 	color : #ddd;
 }
 
+#circleborder{
+	border-radius: 15px;
+}
+
 .navbar-inner {
     background:rgba(16,16,16,0.5);
 }
