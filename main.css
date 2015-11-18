@@ -47,7 +47,11 @@
     background:rgba(16,16,16,0.5);
 }
 
-body:before {
+body{
+	font-family: Segoe UI;
+}
+
+body::before {
     content:"";
     display:block;
     position:fixed;
