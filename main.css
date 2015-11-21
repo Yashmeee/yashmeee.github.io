@@ -1,5 +1,6 @@
 body{
 	font-family: Segoe UI;
+	text-align: center;
 }
 
 #social-buttons button {
@@ -51,6 +52,7 @@ body{
 }
 
 #circleborder{
+	width: 200px;
 	border-radius: 50px;
 }
 
@@ -59,7 +61,7 @@ body{
 }
 
 #brand-icon{
-	width: 50px;
+	width: 45px;
 }
 
 #accessories{
