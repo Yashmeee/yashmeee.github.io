@@ -21,10 +21,6 @@
           mapTypeId: google.maps.MapTypeId.ROADMAP
         }
         var map = new google.maps.Map(mapCanvas, mapOptions);
-        var marker = new google.maps.Marker({
-          position: junctionOne,
-          map: map,
-          title: 'Junction One'});
       }
   google.maps.event.addDomListener(window, 'load', initialize);
 </script>
@@ -57,7 +53,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-6">
-      <div id="map" class="pagination-centered"></div>
+      <div id="map"></div>
     </div>
     <div class="col-sm-6">
       <p>Cambridge is a city in the East of England, as seen on the map to the left.</p>
