@@ -9,14 +9,18 @@
   <script src="https://maps.googleapis.com/maps/api/js"></script>
   <script>
       function initialize() {
-        var mapCanvas = document.getElementById('map');
+        var mapCanvas = {document.getElementById('map')};
         var mapOptions = {
           center: new google.maps.LatLng(52.2050, 0.1190),
-          zoom: 8,
+          zoom: 15,
           mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        var map = new google.maps.Map(mapCanvas, mapOptions)
-      }
+        };
+        var map = {new google.maps.Map(mapCanvas, mapOptions)};
+                var marker = new google.maps.Marker({
+          position: {lat: 52.202369,lng: 0.117794},
+          map: map,
+          title: 'Hello World!'});
+          
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
 </head>
