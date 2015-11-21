@@ -3,6 +3,10 @@ body{
 	text-align: center;
 }
 
+ul{
+	text-align: left;
+}
+
 #social-buttons button {
 	color : white;
 }
