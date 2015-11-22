@@ -86,13 +86,19 @@ ul{
         width: 500px;
         height: 350px;
         background-color: #CCC;
-        padding: 20px;
+        padding: 50px;
       }
 
 #street-view {
-        width: 1000px;
+        width: 500px;
         height: 400px;
         background-color: rgb(204, 255, 255);
+      }
+      
+#street-view2 {
+        width: 500px;
+        height: 400px;
+        background-color: rgb(204, 204, 204);
       }
 
 a {
