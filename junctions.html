@@ -23,16 +23,26 @@
       
       var map = new google.maps.Map(mapCanvas, mapOptions);
       
+      var image1 = {
+        url: 'https://cdn1.iconfinder.com/data/icons/Map-Markers-Icons-Demo-PNG/256/Map-Marker-Marker-Outside-Azure.png',
+        size: new google.maps.Size(20, 32),
+      }
+      
+      var image2 = {
+        url: 'https://cdn1.iconfinder.com/data/icons/Map-Markers-Icons-Demo-PNG/256/Map-Marker-Marker-Outside-Chartreuse.png',
+        size: new google.maps.Size(20, 32),
+      }
+      
       var SSmarker = new google.maps.Marker({ 
         position: junctionOne, 
         map: map, 
-        icon: 'https://cdn1.iconfinder.com/data/icons/Map-Markers-Icons-Demo-PNG/256/Map-Marker-Marker-Outside-Azure.png',
+        icon: image1,
         title: 'Silver Street junction'});
         
       var JLmarker = new google.maps.Marker({ 
         position: junctionTwo, 
         map: map, 
-        icon: "https://cdn1.iconfinder.com/data/icons/Map-Markers-Icons-Demo-PNG/256/Map-Marker-Marker-Outside-Chartreuse.png",
+        icon: image2,
         title: 'John Lewis junction'});
         
       var bikeLayer = new google.maps.BicyclingLayer();
