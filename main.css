@@ -66,23 +66,26 @@ ul{
 
 #brand-icon{
 	width: 45px;
+	padding: 5px;
 }
 
 #accessories{
-	text-align: center;
-	background-color : rgb(204, 204, 204) ;
+	text-align: left;
+	background-color : rgb(128, 128, 128) ;
 	color : #fff;
 }
 
 #accessories-pictures{
-	height: 200;
+	height: 200px;
 	padding: 20px;
+	border-radius: 20px;
 }
 
 #map {
         width: 500px;
         height: 350px;
         background-color: #CCC;
+        padding: 20px;
       }
       
 #floating-panel {
@@ -97,8 +100,8 @@ ul{
   font-family: 'Roboto','sans-serif';
   line-height: 30px;
   padding-left: 10px;
-  margin-left: -100px;
-  margin-top: 600px;
+  margin-left: -50px;
+  margin-top: 700px;
 }
 
 #map2 {
