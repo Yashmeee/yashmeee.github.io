@@ -87,7 +87,7 @@ function initMap() {
   var Cambridge = {lat: 52.2050, lng: 0.1190};
 
   // Set up the map
-  var map2 = new google.maps.Map(document.getElementById('map'), {
+  var map2 = new google.maps.Map(document.getElementById('map2'), {
     center: Cambridge,
     zoom: 18,
     streetViewControl: false
@@ -110,7 +110,7 @@ function initMap() {
 
   // We get the map's default panorama and set up some defaults.
   // Note that we don't yet set it visible.
-  panorama = map.getStreetView();
+  panorama = map2.getStreetView();
   panorama.setPosition(Cambridge);
   panorama.setPov(/** @type {google.maps.StreetViewPov} */({
     heading: 265,
