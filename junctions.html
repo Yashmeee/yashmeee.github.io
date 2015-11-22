@@ -23,15 +23,15 @@
       
       var map = new google.maps.Map(mapCanvas, mapOptions);
       
-      var image1 = {
-        url: 'https://cdn1.iconfinder.com/data/icons/Map-Markers-Icons-Demo-PNG/256/Map-Marker-Marker-Outside-Azure.png',
-        size: new google.maps.Size(20, 32),
-      }
+      var image1 = new google.maps.MarkerImage(
+            "https://cdn1.iconfinder.com/data/icons/Map-Markers-Icons-Demo-PNG/256/Map-Marker-Marker-Outside-Azure.png", //url
+            new google.maps.Size(20, 32), //size
+      );
       
-      var image2 = {
-        url: 'https://cdn1.iconfinder.com/data/icons/Map-Markers-Icons-Demo-PNG/256/Map-Marker-Marker-Outside-Chartreuse.png',
-        size: new google.maps.Size(20, 32),
-      }
+      var image2 = new google.maps.MarkerImage(
+            "https://cdn1.iconfinder.com/data/icons/Map-Markers-Icons-Demo-PNG/256/Map-Marker-Marker-Outside-Chartreuse.png", //url
+            new google.maps.Size(20, 32), //size
+      );
       
       var SSmarker = new google.maps.Marker({ 
         position: junctionOne, 
