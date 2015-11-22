@@ -9,13 +9,13 @@
   <script src="https://maps.googleapis.com/maps/api/js"></script>
   <script>
       function initialize() {
-        var myLatLng = {lat: 52.2050, lng: 0.1190};
+        var Cambridge = {lat: 52.2050, lng: 0.1190};
         var junctionOne = {lat: 52.2023, lng: 0.1177};
         var junctionTwo = {lat: 52.2035, lng: 0.1234};
         
         var mapCanvas = document.getElementById('map');
         var mapOptions = {
-          center: myLatLng,
+          center: Cambridge,
           zoom: 13,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         }
@@ -23,13 +23,28 @@
         var marker = new google.maps.Marker({ 
           position: junctionOne, 
           map: map, 
+          icon: 'http://www.clker.com/cliparts/I/l/L/S/W/9/map-marker-hi.png',
           title: 'Silver Street junction'});
           
         var marker = new google.maps.Marker({ 
           position: junctionTwo, 
           map: map, 
+          icon: "http://www.clker.com/cliparts/F/S/M/2/p/w/map-marker-md.png",
           title: 'John Lewis junction'});
-      }
+          
+        var bikeLayer = new google.maps.BicyclingLayer();
+          bikeLayer.setMap(map);
+        
+        var panorama;
+        
+        panorama = new google.maps.StreetViewPanorama(
+          document.getElementById('street-view'),
+        {
+          position: junctionOne,
+          pov: {heading: 165, pitch: 0},
+          zoom: 1
+        });
+}
   google.maps.event.addDomListener(window, 'load', initialize);
 </script>
   
@@ -74,60 +89,8 @@
 </div>
 
 <div class="container">
-  <div id="floating-panel">
-      <input type="button" value="Toggle Street View" onclick="toggleStreetView();"></input>
-    </div>
-    <div id="map2"></div>
+    <div id="street-view"></div>
 </div>
-
-<script>
-var panorama;
-
-function initMap() {
-  var Cambridge = {lat: 52.2050, lng: 0.1190};
-
-  // Set up the map
-  var map2 = new google.maps.Map(document.getElementById('map2'), {
-    center: Cambridge,
-    zoom: 18,
-    streetViewControl: false
-  });
-
-  // Set up the markers on the map
-  var JLMarker = new google.maps.Marker({
-      position: {lat: 52.2035, lng: 0.1234},
-      map: map2,
-      icon: 'http://www.clker.com/cliparts/F/S/M/2/p/w/map-marker-md.png',
-      title: 'John Lewis junction'
-  });
-
-  var SSMarker = new google.maps.Marker({
-      position: {lat: 52.2023, lng: 0.1177},
-      map: map2,
-      icon: 'http://www.clker.com/cliparts/I/l/L/S/W/9/map-marker-hi.png',
-      title: 'Silver Street Junction'
-  });
-
-  // We get the map's default panorama and set up some defaults.
-  // Note that we don't yet set it visible.
-  panorama = map.getStreetView();
-  panorama.setPosition(Cambridge);
-  panorama.setPov(/** @type {google.maps.StreetViewPov} */({
-    heading: 265,
-    pitch: 0
-  }));
-}
-
-function toggleStreetView() {
-  var toggle = panorama.getVisible();
-  if (toggle == false) {
-    panorama.setVisible(true);
-  } else {
-    panorama.setVisible(false);
-  }
-}
-</script>
-
 
 <div id="newsletter">
   <div class="container">
