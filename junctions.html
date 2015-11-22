@@ -8,43 +8,49 @@
   <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
   <script src="https://maps.googleapis.com/maps/api/js"></script>
   <script>
-      function initialize() {
-        var Cambridge = {lat: 52.2050, lng: 0.1190};
-        var junctionOne = {lat: 52.2023, lng: 0.1177};
-        var junctionTwo = {lat: 52.2035, lng: 0.1234};
+    function initialize() {
+      var Cambridge = {lat: 52.2050, lng: 0.1190};
+      var junctionOne = {lat: 52.2023, lng: 0.1177};
+      var junctionTwo = {lat: 52.2035, lng: 0.1234};
+      
+      var mapCanvas = document.getElementById('map');
+      var mapOptions = {
+        center: Cambridge,
+        zoom: 13,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      var map = new google.maps.Map(mapCanvas, mapOptions);
+      var marker = new google.maps.Marker({ 
+        position: junctionOne, 
+        map: map, 
+        icon: 'https://cdn1.iconfinder.com/data/icons/Map-Markers-Icons-Demo-PNG/256/Map-Marker-Marker-Outside-Azure.png',
+        title: 'Silver Street junction'});
         
-        var mapCanvas = document.getElementById('map');
-        var mapOptions = {
-          center: Cambridge,
-          zoom: 13,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        var map = new google.maps.Map(mapCanvas, mapOptions);
-        var marker = new google.maps.Marker({ 
-          position: junctionOne, 
-          map: map, 
-          icon: 'https://cdn1.iconfinder.com/data/icons/Map-Markers-Icons-Demo-PNG/256/Map-Marker-Marker-Outside-Azure.png',
-          title: 'Silver Street junction'});
-          
-        var marker = new google.maps.Marker({ 
-          position: junctionTwo, 
-          map: map, 
-          icon: "https://cdn1.iconfinder.com/data/icons/Map-Markers-Icons-Demo-PNG/256/Map-Marker-Marker-Outside-Chartreuse.png",
-          title: 'John Lewis junction'});
-          
-        var bikeLayer = new google.maps.BicyclingLayer();
-          bikeLayer.setMap(map);
+      var marker = new google.maps.Marker({ 
+        position: junctionTwo, 
+        map: map, 
+        icon: "https://cdn1.iconfinder.com/data/icons/Map-Markers-Icons-Demo-PNG/256/Map-Marker-Marker-Outside-Chartreuse.png",
+        title: 'John Lewis junction'});
         
-        var panorama;
-        
-        panorama = new google.maps.StreetViewPanorama(
-          document.getElementById('street-view'),
-        {
-          position: junctionOne,
-          pov: {heading: 165, pitch: 0},
-          zoom: 1
-        });
-}
+      var bikeLayer = new google.maps.BicyclingLayer();
+        bikeLayer.setMap(map);
+    }
+      
+    function initialize() {
+      var panorama;
+      var Cambridge = {lat: 52.2050, lng: 0.1190};
+      var junctionOne = {lat: 52.2023, lng: 0.1177};
+      var junctionTwo = {lat: 52.2035, lng: 0.1234};
+      
+      panorama = new google.maps.StreetViewPanorama(
+        document.getElementById('street-view'),
+      {
+        position: junctionOne,
+        pov: {heading: 165, pitch: 0},
+        zoom: 1
+      });
+    }
+      
   google.maps.event.addDomListener(window, 'load', initialize);
 </script>
   
