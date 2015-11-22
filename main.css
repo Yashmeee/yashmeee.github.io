@@ -1,9 +1,6 @@
 body{
 	font-family: Segoe UI;
 	text-align: center;
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
 }
 
 ul{
@@ -108,4 +105,8 @@ ul{
 
 a {
 	color: rgb(0, 0, 0);
+}
+
+div {
+	vertical-align: middle;
 }
