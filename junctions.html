@@ -47,6 +47,17 @@
         zoom: 1
       });
     }
+    
+    function initialize() {
+      var panorama2;
+      
+      panorama2 = new google.maps.StreetViewPanorama(
+        document.getElementById('street-view2'),
+      {
+        position: {lat: 52.2035, lng: 0.1234},
+        pov: {heading: 165, pitch: 0},
+        zoom: 1
+      });
 
   google.maps.event.addDomListener(window, 'load', initialize);
 </script>
@@ -92,7 +103,14 @@
 </div>
 
 <div class="container">
-    <div id="street-view"></div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div id="street-view"></div>
+    </div>
+    <div class="col-sm-6">
+      <div id="street-view2"></div>
+    </div>
+  </div>
 </div>
 
 <div id="newsletter">
