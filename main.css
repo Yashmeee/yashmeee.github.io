@@ -98,3 +98,9 @@ ul{
   padding-left: 10px;
   margin-left: -100px;
 }
+
+#map2 {
+        width: 1000px;
+        height: 400px;
+        background-color: #fff;
+      }
