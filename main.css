@@ -70,12 +70,13 @@ ul{
 
 #accessories{
 	text-align: center;
-	background-color : rgba(215, 40, 40, 0.9) ;
-	color : #F2F2F2;
+	background-color : rgb(204, 204, 204) ;
+	color : #fff;
 }
 
 #accessories-pictures{
 	height: 200;
+	padding: 20px;
 }
 
 #map {
@@ -103,5 +104,5 @@ ul{
 #map2 {
         width: 1000px;
         height: 400px;
-        background-color: #F2F2F2;
+        background-color: rgb(204, 204, 204);
       }
