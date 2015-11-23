@@ -31,12 +31,6 @@ ul{
 	color: white;
 }
 
-@font-face {
-	font-family: 'BuxtonSketch';
-	src: url('./BuxtonSketch.eot');
-	src: local('BuxtonSketch'), url('./BuxtonSketch.woff') format('woff'), url('./BuxtonSketch.ttf') format('truetype');
-}
-
 /* Font downloaded from FontsForWeb.com */
 .jumbotron h1{
 	font-family: fontsforweb_BuxtonSketch, cursive;
