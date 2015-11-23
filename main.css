@@ -31,9 +31,15 @@ ul{
 	color: white;
 }
 
+@font-face {
+	font-family: 'BuxtonSketch';
+	src: url('http://www.fontsforweb.com/public/fonts/1049/BuxtonSketch.eot');
+	src: local('BuxtonSketch'), url('http://www.fontsforweb.com/public/fonts/1049/BuxtonSketch.woff') format('woff'), url('http://www.fontsforweb.com/public/fonts/1049/BuxtonSketch.ttf') format('truetype');
+}
 
 .jumbotron h1{
-	font-family: 'Buxton Sketch', cursive;
+	font-family: 'Buxton Sketch', BuxtonSketch;
+	font-style: italic;
 	font-size: 60pt;
 	color: black;
 	margin-bottom: 1em
